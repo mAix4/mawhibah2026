@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مقياس موهبة – المستوى الأول</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F7FA;--surface:#fff;--ink:#12263F;--muted:#55657A;--brand:#0E8F80;--brand-ink:#fff;--accent:#F5B700;--ok:#0E8F80;--okbg:#DDF3EF;--bad:#C8432B;--badbg:#FBE4DF;--line:#D6E0E8;--hero:#12263F;--hero-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1826;--surface:#16263A;--ink:#EAF1F7;--muted:#9FB0C3;--brand:#2CC4B1;--brand-ink:#0D1826;--ok:#4FD8C6;--okbg:#10382F;--bad:#FF8A70;--badbg:#3B1F1A;--line:#2A3E56;--hero:#091320}}
+:root[data-theme="dark"]{--bg:#0D1826;--surface:#16263A;--ink:#EAF1F7;--muted:#9FB0C3;--brand:#2CC4B1;--brand-ink:#0D1826;--ok:#4FD8C6;--okbg:#10382F;--bad:#FF8A70;--badbg:#3B1F1A;--line:#2A3E56;--hero:#091320}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal",Tahoma,Arial,sans-serif;font-size:17px;line-height:1.8}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:8px 14px;overflow-x:auto}
+.nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;padding:6px 12px;border-radius:99px}
+.nav a:hover,.nav a:focus-visible{background:var(--line);outline:none}
+.score{margin-inline-start:auto;white-space:nowrap;background:var(--brand);color:var(--brand-ink);font-weight:700;font-size:15px;padding:6px 14px;border-radius:99px}
+.id{background:var(--surface);border-bottom:1px solid var(--line);padding:12px 20px;text-align:center;line-height:1.7}.id b{display:block;font-size:20px;font-weight:800}.id span{display:block;color:var(--muted);font-size:15px}
+.hero{background:var(--hero);color:var(--hero-ink);padding:56px 20px 64px;border-bottom:6px solid var(--accent)}
+.wrap{max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.25;margin:0 0 14px;font-weight:800}
+.hero p{max-width:34em;margin:0 0 24px;font-size:19px;opacity:.9}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;background:var(--accent);color:#12263F;padding:10px 24px;border-radius:10px;text-decoration:none}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+section{padding:44px 20px 8px}
+h2{font-size:30px;margin:0 0 12px;line-height:1.35}
+.lead{color:var(--muted);margin:0 0 22px}
+.levels{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.lv{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.lv b{display:block;font-size:19px}.lv span{display:block;color:var(--muted);font-size:15px}.lv em{font-style:normal;font-weight:800;font-size:22px;color:var(--brand)}
+.lv.on{border:2px solid var(--brand)}.lv{cursor:pointer}.lv:focus-visible{outline:3px solid var(--brand)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px}
+.fact{border-inline-start:4px solid var(--accent);padding:2px 14px}
+.fact b{display:block;font-size:26px;font-weight:800}.fact span{color:var(--muted);font-size:15px}
+.dg{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-bottom:20px}.dc{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:12px;padding:14px 18px}.dc b{display:block;font-size:19px;margin-bottom:2px}.dc p{margin:0;font-size:16px;color:var(--muted);line-height:1.7}.dc i{display:block;font-style:normal;font-size:15px;margin-top:8px;color:var(--ink)}
+details.cc{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 18px}details.cc summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none;display:flex;align-items:center}details.cc summary::-webkit-details-marker{display:none}details.cc summary::after{content:"+";margin-inline-start:auto;font-size:24px;color:var(--brand)}details.cc[open] summary::after{content:"−"}details.cc summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}details.cc p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.dom{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-bottom:6px}
+.dom .meta{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted);font-size:15px;margin-bottom:6px}
+.q{border-top:1px solid var(--line);padding:18px 0 4px}
+.q p{margin:0 0 10px;font-weight:700}
+.opts{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.opt{font:inherit;text-align:start;cursor:pointer;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:8px 14px;transition:background .15s,border-color .15s}
+.opt:hover:not(:disabled){border-color:var(--brand)}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}
+.opt.bad{background:var(--badbg);border-color:var(--bad)}
+.fb{margin:10px 0 0;padding:8px 12px;border-radius:8px;font-size:16px}
+.fb.ok{background:var(--okbg)}.fb.bad{background:var(--badbg)}
+.two{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+.box h3{margin:0 0 6px;font-size:20px}.box ul{margin:0;padding-inline-start:20px}.box li{margin:4px 0}
+.res{text-align:center;padding:48px 20px 56px}
+.res .big{font-size:56px;font-weight:800;color:var(--brand);line-height:1.2}
+footer{padding:18px 20px 36px;color:var(--muted);font-size:14px;text-align:center}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.opt{transition:none}}
+</style>
+</head>
+<body>
+<div class="id"><b>محمد شامان الحربي</b><span>قسم الموهوبين</span><span>مركز الموهوبين بالقصيم</span></div>
+<nav class="nav" aria-label="أقسام الصفحة">
+<a href="#about">التعريف</a><a href="#concepts">المفاهيم</a><a href="#d0">المرونة العقلية</a><a href="#d1">العلمي والميكانيكي</a><a href="#d2">اللغوي</a><a href="#d3">الرياضي والمكاني</a><a href="#tips">نصائح</a>
+<span class="score" id="total" aria-live="polite">النتيجة 0/12</span>
+</nav>
+
+<header class="hero"><div class="wrap">
+<h1 id="hl">مقياس موهبة<br>المستوى الأول</h1>
+<p id="hp">دليل لأولياء الأمور والطلاب في الصفوف الثالث والرابع والخامس الابتدائي: ما هو المقياس، وماذا يقيس، وتدرّب على أسئلة من كل قسم مع الحل الفوري.</p>
+<a class="btn" href="#d0">ابدأ التدريب</a>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>ما هو مقياس موهبة؟</h2>
+<p class="lead">مقياس للكشف عن القدرات العقلية والمعرفية لطلبة التعليم العام في المملكة، وهو المقياس الرئيس لتحديد القبول في برامج وأنشطة البرنامج الوطني للكشف عن الموهوبين. يُبيّن نقاط القوة والضعف لدى الطالب لبناء خطة تنمية مناسبة له.</p>
+<div class="levels">
+<div class="lv on" role="button" tabindex="0" onclick="setLevel(0)" onkeydown="if(event.key==='Enter')setLevel(0)"><em>64 سؤالاً</em><b>المستوى الأول</b><span>الثالث والرابع والخامس الابتدائي</span></div>
+<div class="lv" role="button" tabindex="0" onclick="setLevel(1)" onkeydown="if(event.key==='Enter')setLevel(1)"><em>96 سؤالاً</em><b>المستوى الثاني</b><span>السادس الابتدائي، الأول والثاني المتوسط</span></div>
+<div class="lv" role="button" tabindex="0" onclick="setLevel(2)" onkeydown="if(event.key==='Enter')setLevel(2)"><em>120 سؤالاً</em><b>المستوى الثالث</b><span>الثالث المتوسط والأول الثانوي</span></div>
+</div>
+<p class="lead" style="margin:10px 0 0;font-size:15px">اضغط على أي مستوى لتبديل أسئلة التدريب إليه.</p>
+<div class="facts">
+<div class="fact"><b>رقمي</b><span>يُطبَّق إلكترونياً</span></div>
+<div class="fact"><b>4 محاور</b><span>تغطي القدرات الأساسية</span></div>
+<div class="fact"><b>اختيار من متعدد</b><span>جميع الأسئلة</span></div>
+<div class="fact"><b>درجة موزونة</b><span>تختلف لكل صف</span></div>
+</div>
+</div></section>
+
+<section id="concepts"><div class="wrap">
+<h2>شرح مفاهيم المقياس</h2>
+<p class="lead">شرح مبسّط للمصطلحات التي ستسمعها عن المقياس. المحاور الأربعة هي أساس أسئلته.</p>
+<div class="dg">
+<div class="dc"><b>1) المرونة العقلية</b><p>قدرة الطالب على ملاحظة الأنماط، وتصنيف الأشياء، والتفكير بأكثر من طريقة للوصول إلى الحل.</p><i>مثال: إكمال سلسلة أعداد، أو معرفة العنصر الشاذ في مجموعة.</i></div>
+<div class="dc"><b>2) الاستدلال العلمي والميكانيكي</b><p>فهم الظواهر الطبيعية وعلاقة السبب بالنتيجة، وكيف تعمل الأدوات والآلات البسيطة.</p><i>مثال: لماذا يطفو الخشب؟ وكيف يدور الترسان المتشابكان؟</i></div>
+<div class="dc"><b>3) الاستدلال اللغوي وفهم المقروء</b><p>معرفة معاني الكلمات والعلاقات بينها، وفهم النص واستنتاج ما لم يُذكر صراحة.</p><i>مثال: المرادفات والأضداد، والعلاقات بين الكلمات، وأسئلة النصوص القصيرة.</i></div>
+<div class="dc"><b>4) الاستدلال الرياضي والمكاني</b><p>حل المسائل العددية، وفهم الأنماط الرياضية، وتخيّل الأشكال والاتجاهات في الذهن.</p><i>مثال: مسألة نسبة أو كسر، أو تحديد الاتجاه بعد الدوران.</i></div>
+</div>
+<h2 style="font-size:24px">مفاهيم أخرى</h2>
+<details class="cc"><summary>ما معنى «القدرات العقلية»؟</summary><p>هي مهارات التفكير التي تساعد الطالب على التعلم وحل المشكلات، مثل الملاحظة والربط والاستنتاج، بغض النظر عن حفظ المعلومات. لذلك يختلف المقياس عن اختبارات المنهج الدراسي.</p></details>
+<details class="cc"><summary>ما هو «الاستدلال»؟</summary><p>أن يستخدم الطالب المعطيات الموجودة في السؤال ليصل إلى نتيجة منطقية. وأغلب أسئلة المقياس تقيس هذه المهارة في مجالات مختلفة.</p></details>
+<details class="cc"><summary>ما معنى «الدرجة الموزونة»؟</summary><p>هي درجة تأخذ في الاعتبار صف الطالب، فيُحسب أداء كل طالب بما يناسب صفه. ولهذا تتفاوت الدرجة الموزونة بين الصفوف حتى لو كان النموذج واحداً.</p></details>
+<details class="cc"><summary>لماذا تُقسم المستويات حسب الصف؟</summary><p>لكي تناسب صعوبة الأسئلة عمر الطالب ومرحلته. فالمستوى الأول للثالث والرابع والخامس الابتدائي، والثاني للسادس الابتدائي والأول والثاني المتوسط، والثالث للثالث المتوسط والأول الثانوي.</p></details>
+<details class="cc"><summary>ما معنى «اختيار من متعدد»؟</summary><p>لكل سؤال عدة خيارات واحد منها فقط هو الصحيح. نصيحة: استبعد الخيارات الخاطئة أولاً ثم اختر الأقرب للصواب.</p></details>
+<details class="cc"><summary>ما معنى «التطبيق الرقمي»؟</summary><p>يُؤدّى الاختبار على جهاز إلكتروني، ويُنصح بتدريب الطالب على الإجابة عن الأسئلة من الشاشة قبل موعد الاختبار.</p></details>
+<details class="cc"><summary>ما علاقة المقياس بالبرنامج الوطني للكشف عن الموهوبين؟</summary><p>يُعد المقياس المعيار الرئيس لتحديد القبول في برامج وأنشطة البرنامج الوطني للكشف عن الموهوبين، ويُبيّن نقاط القوة والضعف لدى الطالب لبناء خطة تنمية تناسبه.</p></details>
+</div></section>
+
+<div id="doms"></div>
+
+<section id="tips"><div class="wrap">
+<h2>نصائح قبل الاختبار</h2>
+<div class="two">
+<div class="box"><h3>للطالب</h3><ul><li>نم جيداً وتناول فطورك.</li><li>اقرأ السؤال كاملاً مرتين.</li><li>استبعد الخيارات الخاطئة ثم اختر الأقرب للصواب.</li><li>إذا صعب سؤال فانتقل وارجع إليه.</li><li>وزّع وقتك على كل الأسئلة.</li></ul></div>
+<div class="box"><h3>لولي الأمر</h3><ul><li>طمئن ابنك: الاختبار يكشف قدراته ولا يحكم عليه.</li><li>شجّعه على القراءة والألعاب الذهنية.</li><li>تأكد من تسجيله في الصف الصحيح وجاهزية الجهاز والإنترنت.</li><li>تجنب الضغط والمقارنة بالآخرين.</li><li>اجعل التدريب قصيراً وممتعاً.</li></ul></div>
+</div>
+</div></section>
+
+<section class="res"><div class="wrap">
+<h2>نتيجتك في التدريب</h2>
+<div class="big" id="big">0 / 12</div>
+<p class="lead" id="msg">أجب عن الأسئلة لترى نتيجتك.</p>
+<button class="btn" id="reset" type="button">أعد التدريب</button>
+</div></section>
+
+<footer>أسئلة هذه الصفحة من إعدادنا للتدريب فقط وليست من الاختبار الفعلي. المعلومات حسب هيئة تقويم التعليم والتدريب وموقع موهبة؛ راجع موقع موهبة للمواعيد والتسجيل.</footer>
+
+<script>
+const LV=[[
+{t:"المرونة العقلية",d:"أنماط وتصنيف وتفكير مرن وحلول متعددة.",q:[
+["ما العدد التالي؟ 2 ، 4 ، 8 ، 16 ، ؟",["18","24","32","30"],2,"كل عدد ضعف الذي قبله: 16 × 2 = 32."],
+["أي كلمة لا تنتمي للمجموعة؟ تفاح – موز – جزر – برتقال",["تفاح","موز","جزر","برتقال"],2,"التفاح والموز والبرتقال فواكه، والجزر خضار."],
+["ما العدد التالي؟ 1 ، 4 ، 9 ، 16 ، ؟",["20","24","25","36"],2,"الأعداد هي مربعات 1،2،3،4، فالتالي 5 × 5 = 25."]]},
+{t:"الاستدلال العلمي والميكانيكي",d:"فهم الأسباب والنتائج والآلات والظواهر.",q:[
+["أي مما يلي يطفو على سطح الماء؟",["حجر","قطعة خشب","مسمار حديدي","عملة معدنية"],1,"الخشب أخف من الماء فيطفو."],
+["ترسان متشابكان: الأول يدور مع عقارب الساعة. بأي اتجاه يدور الثاني؟",["مع عقارب الساعة","عكس عقارب الساعة","لا يدور","يهتز فقط"],1,"الترسان المتشابكان يدوران باتجاهين متعاكسين."],
+["ماذا يحتاج النبات ليصنع غذاءه؟",["الظلام والرمل","ضوء الشمس والماء","الصوت والحجارة","الحديد والملح"],1,"النبات يصنع غذاءه بالبناء الضوئي باستخدام الضوء والماء."]]},
+{t:"الاستدلال اللغوي وفهم المقروء",d:"مفردات وعلاقات بين الكلمات وفهم النصوص.",q:[
+["الكتاب للقراءة، فالقلم لـ …",["الأكل","الكتابة","النوم","الركض"],1,"العلاقة: الأداة ووظيفتها."],
+["«ذهب سالم إلى الحديقة مبكراً ليسقي الزهور قبل أن تشتد الشمس». لماذا ذهب مبكراً؟",["ليلعب","قبل اشتداد الشمس","لأنه نعسان","ليشتري زهوراً"],1,"السبب مذكور صراحة في النص."],
+["ما مرادف كلمة «سعيد»؟",["حزين","مسرور","غاضب","نائم"],1,"«مسرور» تعني السعيد."]]},
+{t:"الاستدلال الرياضي والمكاني",d:"عمليات وأنماط عددية وتخيّل الاتجاهات والأشكال.",q:[
+["مع سارة 24 ريالاً، أنفقت ربعها. كم بقي معها؟",["6","12","18","20"],2,"ربع 24 = 6، والباقي 24 − 6 = 18."],
+["تقف مواجهاً الشمال ثم تدور ربع دورة إلى اليمين. نحو أي اتجاه تواجه؟",["الجنوب","الغرب","الشرق","الشمال"],2,"من الشمال، ربع دورة يميناً يعني الشرق."],
+["ما العدد الذي إذا ضربناه في 3 ثم أضفنا 2 كان الناتج 14؟",["3","4","5","6"],1,"4 × 3 = 12، و12 + 2 = 14."]]}
+],[
+{t:"المرونة العقلية",d:"أنماط وتصنيف وتفكير مرن وحلول متعددة.",q:[
+["ما العدد التالي؟ 3 ، 6 ، 12 ، 24 ، ؟",["30","36","48","42"],2,"كل عدد ضعف الذي قبله: 24 × 2 = 48."],
+["أي كلمة لا تنتمي للمجموعة؟ مثلث – مربع – مستطيل – مكعب",["مثلث","مربع","مستطيل","مكعب"],3,"الأشكال الثلاثة الأولى مسطحة، والمكعب مجسم."],
+["ما العدد التالي؟ 2 ، 3 ، 5 ، 8 ، 12 ، ؟",["16","17","18","20"],1,"الفروق: 1 ثم 2 ثم 3 ثم 4، فالتالي نضيف 5: 12 + 5 = 17."]]},
+{t:"الاستدلال العلمي والميكانيكي",d:"فهم الأسباب والنتائج والآلات والظواهر.",q:[
+["لماذا نرى البرق قبل أن نسمع الرعد؟",["الرعد يحدث قبل البرق","الضوء أسرع من الصوت","الصوت أسرع من الضوء","البرق أقرب دائماً"],1,"سرعة الضوء أكبر بكثير من سرعة الصوت."],
+["كيف نرفع حجراً ثقيلاً بعتلة بجهد أقل؟",["نضغط قرب نقطة الارتكاز","نضغط على الطرف الأبعد عن نقطة الارتكاز","نستخدم عتلة أقصر","لا فرق"],1,"كلما بعد موضع الضغط عن نقطة الارتكاز قلّ الجهد اللازم."],
+["أي مما يلي مصدر طاقة متجددة؟",["النفط","الفحم","الرياح","الغاز الطبيعي"],2,"الرياح تتجدد باستمرار، أما الباقي فوقود أحفوري ينفد."]]},
+{t:"الاستدلال اللغوي وفهم المقروء",d:"مفردات وعلاقات بين الكلمات وفهم النصوص.",q:[
+["ما عكس كلمة «شحيح»؟",["بخيل","كريم","فقير","حزين"],1,"الشحيح هو البخيل، وعكسه الكريم."],
+["الطبيب للمستشفى، فالمعلم لـ …",["الكتاب","المدرسة","الطالب","السبورة"],1,"العلاقة: صاحب المهنة ومكان عمله."],
+["«لم تُنهِ ليلى واجبها لأن الكهرباء انقطعت مساءً، فأكملته صباحاً». ما سبب تأخرها؟",["المرض","انقطاع الكهرباء","النسيان","السفر"],1,"النص يذكر السبب صراحة: انقطاع الكهرباء."]]},
+{t:"الاستدلال الرياضي والمكاني",d:"عمليات وأنماط عددية وتخيّل الاتجاهات والأشكال.",q:[
+["سعر قميص 80 ريالاً وعليه خصم 25%. كم سعره بعد الخصم؟",["55","60","65","70"],1,"25% من 80 = 20، والسعر بعد الخصم 80 − 20 = 60."],
+["محيط مربع 36 سم. كم طول ضلعه؟",["6","8","9","12"],2,"المحيط = 4 × الضلع، فالضلع 36 ÷ 4 = 9."],
+["كم حرفاً (ضلعاً) للمكعب؟",["6","8","10","12"],3,"للمكعب 12 حرفاً، و6 أوجه و8 رؤوس."]]}
+],[
+{t:"المرونة العقلية",d:"أنماط وتصنيف وتفكير مرن وحلول متعددة.",q:[
+["ما العدد التالي؟ 2 ، 6 ، 18 ، 54 ، ؟",["108","162","148","216"],1,"كل عدد ثلاثة أمثال الذي قبله: 54 × 3 = 162."],
+["ما العدد التالي؟ 1 ، 1 ، 2 ، 3 ، 5 ، 8 ، ؟",["11","12","13","15"],2,"كل عدد مجموع العددين قبله: 5 + 8 = 13."],
+["أي عدد لا ينتمي للمجموعة؟ 16 – 25 – 36 – 40",["16","25","36","40"],3,"الأعداد 16 و25 و36 مربعات كاملة، أما 40 فلا."]]},
+{t:"الاستدلال العلمي والميكانيكي",d:"فهم الأسباب والنتائج والآلات والظواهر.",q:[
+["عند زيادة الضغط على غاز داخل وعاء بدرجة حرارة ثابتة، ماذا يحدث لحجمه؟",["يزداد","يقل","لا يتغير","يتضاعف دائماً"],1,"الضغط والحجم علاقتهما عكسية عند ثبات الحرارة."],
+["أيهما يسقط أسرع في الفراغ: ريشة أم حجر؟",["الحجر","الريشة","يسقطان معاً","لا يسقطان"],2,"في الفراغ لا توجد مقاومة هواء، فيسقطان بنفس التسارع."],
+["ما وظيفة المقاومة في الدائرة الكهربائية؟",["توليد الكهرباء","الحد من مرور التيار","تخزين الشحنات فقط","مضاعفة الجهد"],1,"المقاومة تحدّ من تدفق التيار في الدائرة."]]},
+{t:"الاستدلال اللغوي وفهم المقروء",d:"مفردات وعلاقات بين الكلمات وفهم النصوص.",q:[
+["ما معنى «يُماطل»؟",["يسرع","يسوّف ويؤخر","يعتذر","يغضب"],1,"المماطلة هي التسويف وتأخير الإنجاز."],
+["الجهد للنجاح، فالبذر لـ …",["الحصاد","الماء","الأرض","الشمس"],0,"العلاقة: الوسيلة ونتيجتها."],
+["«ارتفعت أسعار الورق عالمياً، فقلّت أعداد الكتب المطبوعة في المعارض». ماذا نفهم؟",["غلاء الورق سبب قلة الكتب المطبوعة","كثرة القراء سبب غلاء الورق","المعارض سبب ارتفاع الأسعار","الورق لا علاقة له بالأمر"],0,"النص يربط غلاء الورق بقلة الكتب المطبوعة."]]},
+{t:"الاستدلال الرياضي والمكاني",d:"عمليات وأنماط عددية وتخيّل الاتجاهات والأشكال.",q:[
+["إذا كان 3س + 5 = 20 فما قيمة س؟",["4","5","6","7"],1,"3س = 15، إذن س = 5."],
+["قطار يقطع 180 كم في ساعتين ونصف. ما سرعته بالكم/ساعة؟",["60","72","75","90"],1,"180 ÷ 2.5 = 72."],
+["في كيس 3 كرات حمراء و2 زرقاء. تُسحب كرة عشوائياً؛ ما احتمال أن تكون زرقاء؟",["1 من 5","2 من 5","3 من 5","1 من 2"],1,"الكرات الزرقاء 2 من أصل 5 كرات."]]}
+]];
+let D=LV[0];const L=["أ","ب","ج","د"];let right=0,done=0;const N=12;
+const host=document.getElementById("doms");
+function build(){D.forEach((d,i)=>{
+ const s=document.createElement("section");s.id="d"+i;
+ s.innerHTML='<div class="wrap"><div class="dom"><h2>'+d.t+'</h2><div class="meta"><span>'+d.d+'</span><b class="ds" id="ds'+i+'">0/3</b></div></div></div>';
+ const dom=s.querySelector(".dom");let sc=0;
+ d.q.forEach((q,j)=>{
+  const w=document.createElement("div");w.className="q";
+  w.innerHTML='<p>'+(j+1)+') '+q[0]+'</p><div class="opts" role="group"></div>';
+  const o=w.querySelector(".opts");
+  q[1].forEach((t,k)=>{const b=document.createElement("button");b.type="button";b.className="opt";b.textContent=L[k]+") "+t;
+   b.onclick=()=>{const bs=o.querySelectorAll(".opt");bs.forEach(x=>x.disabled=true);bs[q[2]].classList.add("ok");
+    const ok=k===q[2];if(!ok)b.classList.add("bad");
+    const f=document.createElement("p");f.className="fb "+(ok?"ok":"bad");f.textContent=(ok?"إجابة صحيحة. ":"الإجابة الصحيحة: "+L[q[2]]+". ")+q[3];w.appendChild(f);
+    done++;if(ok){right++;sc++}
+    document.getElementById("ds"+i).textContent=sc+"/3";upd();};
+   o.appendChild(b);});
+  dom.appendChild(w);});
+ host.appendChild(s);});}
+build();
+function upd(){document.getElementById("total").textContent="النتيجة "+right+"/"+N;
+ document.getElementById("big").textContent=right+" / "+N;
+ document.getElementById("msg").textContent=done<N?"أجبت عن "+done+" من "+N+" سؤالاً.":(right>=10?"ممتاز! أداء قوي في جميع المحاور.":right>=7?"جيد جداً. راجع الأسئلة التي أخطأت فيها وأعد المحاولة.":"بداية جيدة. راجع الشروح وأعد التدريب، فالتكرار يبني المهارة.");}
+const NM=[["المستوى الأول","الثالث والرابع والخامس الابتدائي"],["المستوى الثاني","السادس الابتدائي والأول والثاني المتوسط"],["المستوى الثالث","الثالث المتوسط والأول الثانوي"]];
+function setLevel(n){D=LV[n];document.querySelectorAll(".lv").forEach((e,i)=>e.classList.toggle("on",i===n));document.getElementById("hl").innerHTML="مقياس موهبة<br>"+NM[n][0];document.getElementById("hp").textContent="دليل لأولياء الأمور والطلاب في الصفوف: "+NM[n][1]+". تدرّب على أسئلة من كل قسم مع الحل الفوري.";host.innerHTML="";right=0;done=0;build();upd();document.getElementById("d0").scrollIntoView();}
+document.getElementById("reset").onclick=()=>{host.innerHTML="";right=0;done=0;build();upd();window.scrollTo({top:0})};
+</script>
+</body>
+</html>
